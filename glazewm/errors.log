@@ -1,0 +1,7 @@
+[2m2024-10-22T22:55:27.496076Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_effects.focused_window.border: Color must start with a `#`. at line 50 column 7
+[2m2024-10-26T21:55:58.373772Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-10-26T21:56:04.527048Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-10-27T10:30:16.136435Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 242 column 15
+[2m2024-10-27T10:30:19.034253Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 242 column 15
