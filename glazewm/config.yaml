@@ -147,6 +147,9 @@ window_rules:
       - window_process: { equals: 'obs64' }
         window_class: { regex: 'Qt662QWindowIcon' }
         window_title: { regex: 'Settings' }
+      - window_process: { equals: 'obs64' }
+        window_class: { regex: 'Qt662QWindowIcon' }
+        window_title: { regex: 'Remux.*' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
