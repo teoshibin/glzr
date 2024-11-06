@@ -137,6 +137,17 @@ window_rules:
       - window_process: { equals: 'BF2042' }
         window_class: { regex: '.*' }
 
+      # OBS
+      - window_process: { equals: 'obs64' }
+        window_class: { regex: 'Qt662QWindowIcon' }
+        window_title: { regex: 'Advanced Audio Properties' }
+      - window_process: { equals: 'obs64' }
+        window_class: { regex: 'Qt662QWindowIcon' }
+        window_title: { regex: 'Properties for.*' }
+      - window_process: { equals: 'obs64' }
+        window_class: { regex: 'Qt662QWindowIcon' }
+        window_title: { regex: 'Settings' }
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: 'resize'
