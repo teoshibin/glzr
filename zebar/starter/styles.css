@@ -104,7 +104,7 @@ body,
 }
 
 .cpu .high-usage {
-  color: #900029;
+  color: rgb(243, 139, 168);
 }
 
 .battery {
