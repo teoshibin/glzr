@@ -5,3 +5,7 @@
  at line 242 column 15
 [2m2024-10-27T10:30:19.034253Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
  at line 242 column 15
+[2m2025-03-12T19:30:13.057469Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m binding_modes[2].keybindings[2].commands: unexpected argument found
+ at line 185 column 19
+[2m2025-03-12T19:30:17.148695Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m binding_modes[2].keybindings[2].commands: unexpected argument found
+ at line 185 column 19
