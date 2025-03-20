@@ -32,14 +32,14 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: '5px'
+  inner_gap: '4px'
 
   # Gap between windows and the screen edge.
   outer_gap:
     top: '44px'
-    right: '5px'
-    bottom: '5px'
-    left: '5px'
+    right: '4px'
+    bottom: '4px'
+    left: '4px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -114,8 +114,26 @@ workspaces:
     keep_alive: true
 
 window_rules:
+  - commands: ["set-floating"]
+    match:
+      # Winspy
+      - window_process: { equals: 'winspy' }
+      # obs Settings
+      - window_process: { equals: 'obs64' }
+        window_title: { regex: 'Properties for.*' }
+      - window_process: { equals: 'obs64' }
+        window_title: { regex: 'Remux.*' }
+
   - commands: ['ignore']
     match:
+      # Games
+      - window_process: { equals: 'BF2042' }
+        window_class: { regex: '.*' }
+      - window_process: { equals: 'Nier:Automata' }
+        window_class: { regex: '.*' }
+      - window_process: { equals: 'League of Legends.*' }
+        window_class: { regex: '.*' }
+
       # Ignores any Zebar windows.
       - window_process: { equals: 'zebar' }
 
@@ -134,27 +152,6 @@ window_rules:
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
 
-      # Games
-      - window_process: { equals: 'BF2042' }
-        window_class: { regex: '.*' }
-      - window_process: { equals: 'Nier:Automata' }
-        window_class: { regex: '.*' }
-      - window_process: { equals: 'League of Legends.*' }
-        window_class: { regex: '.*' }
-
-      # OBS
-      - window_process: { equals: 'obs64' }
-        window_class: { regex: 'Qt662QWindowIcon' }
-        window_title: { regex: 'Advanced Audio Properties' }
-      - window_process: { equals: 'obs64' }
-        window_class: { regex: 'Qt662QWindowIcon' }
-        window_title: { regex: 'Properties for.*' }
-      - window_process: { equals: 'obs64' }
-        window_class: { regex: 'Qt662QWindowIcon' }
-        window_title: { regex: 'Settings' }
-      - window_process: { equals: 'obs64' }
-        window_class: { regex: 'Qt662QWindowIcon' }
-        window_title: { regex: 'Remux.*' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -227,11 +224,11 @@ keybindings:
 
   # Change focus from tiling windows -> floating -> fullscreen.
   - commands: ['wm-cycle-focus']
-    bindings: ['ctrl+alt+space']
+    bindings: ['ctrl+space']
 
   # Change the focused window to be floating.
   - commands: ['toggle-floating --centered']
-    bindings: ['alt+shift+space']
+    bindings: ['alt+f']
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
@@ -239,7 +236,7 @@ keybindings:
 
   # Change the focused window to be fullscreen.
   - commands: ['toggle-fullscreen']
-    bindings: ['alt+f']
+    bindings: ['alt+shift+enter']
 
   # Minimize focused window.
   - commands: ['toggle-minimized']
@@ -247,7 +244,7 @@ keybindings:
 
   # Close focused window.
   - commands: ['close']
-    bindings: ['alt+shift+q']
+    bindings: ['alt+w']
 
   # Kill GlazeWM process safely.
   - commands: ['wm-exit']
