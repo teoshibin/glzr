@@ -118,11 +118,14 @@ window_rules:
     match:
       # Winspy
       - window_process: { equals: 'winspy' }
-      # obs Settings
+      # OBS
       - window_process: { equals: 'obs64' }
         window_title: { regex: 'Properties for.*' }
       - window_process: { equals: 'obs64' }
         window_title: { regex: 'Remux.*' }
+      # Jetbrain IDEs
+      - window_process: { equals: 'rustrover64' }
+        window_title: { equals: 'Settings' }
 
   - commands: ['ignore']
     match:
